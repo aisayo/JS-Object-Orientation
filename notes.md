@@ -6,6 +6,9 @@
 - Helps design code that is easier to read, understand and change
 - Structurally establishes relationships between data and functions
 - Encapsulates all information and behavior of instances
+  - <https://javascriptissexy.com/oop-in-javascript-what-you-need-to-know/>
+  - <https://codeburst.io/object-oriented-programming-in-javascript-51b2bdfdfe9f>
+  - <https://www.freecodecamp.org/news/an-introduction-to-object-oriented-programming-in-javascript-8900124e316a/>
 
 ## OO Benefits
 
@@ -25,15 +28,27 @@
 - To create a class: `class ClassName {}`
 - Constructor method allows us to pass in arguments, typically initial data about the object
 - Not hoisted: needs to be declared before it is called
+  - <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes>
 
 ## Constructor function
 
 - Used to initialize class properties when new instance is created
+- Syntax: `constructor(){ this.property = value }`
+  - <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor>
 
 ## This
 
 - Can reference object it is inside
 - Similar to Ruby’s self
+- Determined by how a function is called(runtime binding)
+- Can use `bind()` to set value of `this` regardless of how it is called
+- Arrow functions do not bind `this`
+- call():
+- apply():
+  - <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this>
+  - `bind()`: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind>
+  - `call()`: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call>
+  - `apply()`: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply>
 
 ## Private Properties
 
