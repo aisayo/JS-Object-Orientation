@@ -51,7 +51,8 @@
 - Can use `bind()` to set value of `this` regardless of how it is called
 - call() & apply(): Let you set `this` value when calling a function
 
-`function getBrand(prefix) {
+<pre><code>
+function getBrand(prefix) {
     console.log(prefix + this.brand);
 }
 
@@ -64,6 +65,7 @@ let audi = {
 
 getBrand.call(honda, "It's a ");
 getBrand.call(audi, "It's an ");`
+</code></pre>
 
   - <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this>
   - <https://www.w3schools.com/js/js_this.asp>
