@@ -38,14 +38,35 @@
 
 ## This
 
-- Can reference object it is inside
+- Can reference object it is inside/object it belongs to
 - Similar to Ruby’s self
 - Determined by how a function is called(runtime binding)
-- Can use `bind()` to set value of `this` regardless of how it is called
 - Arrow functions do not bind `this`
-- call():
-- apply():
+- Different `this` values
+  - Method: this = owner object
+  - Alone: this = global object
+  - Function: this = global object
+  - Strict mode("use strict"): this = undefined
+  - Event: this = element that received event
+- Can use `bind()` to set value of `this` regardless of how it is called
+- call() & apply(): Let you set `this` value when calling a function
+
+`function getBrand(prefix) {
+    console.log(prefix + this.brand);
+}
+
+let honda = {
+    brand: 'Honda'
+};
+let audi = {
+    brand: 'Audi'
+};
+
+getBrand.call(honda, "It's a ");
+getBrand.call(audi, "It's an ");`
+
   - <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this>
+  - <https://www.w3schools.com/js/js_this.asp>
   - `bind()`: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind>
   - `call()`: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call>
   - `apply()`: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply>
