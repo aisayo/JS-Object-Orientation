@@ -50,6 +50,7 @@
   - Event: this = element that received event
 - Can use `bind()` to set value of `this` regardless of how it is called
 - call() & apply(): Let you set `this` value when calling a function
+- apply accepts an array as second argument, otherwise similar to call
 
 <pre><code>
 function getBrand(prefix) {
@@ -72,12 +73,7 @@ getBrand.call(audi, "It's an ");`
   - `bind()`: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind>
   - `call()`: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call>
   - `apply()`: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply>
-
-## Private Properties
-
-- Not available in modern versions of JS
-- Can mimic private properties by adding _ to property name
-- `class ClassName() { constructor(amount){ this._amount: amount }}`
+  - <https://www.javascripttutorial.net/javascript-this/>
 
 ## Methods
 
@@ -88,6 +84,7 @@ getBrand.call(audi, "It's an ");`
 - Available to any instance they belong to
 - Can be called from inside other methods just like properties
 - Behaviors of a class instance
+- Should be declared inside class function, after constructor
 
 #### Static Methods(Class Methods)
 
@@ -95,14 +92,8 @@ getBrand.call(audi, "It's an ");`
 - Can not invoke on an instance
 - Often used in ‘utility’ classes: classes that encapsulate a set of related methods but dont need to be made into instances
 
-#### Getter method
+#### Getter and Setter Methods
 
-- `get` keyword was introduced in modern JS
-- Used when retrieving data from an instance
-- Benefit of using it is avoiding calling behavior until it is accessed
-- Will increase performance
-- Binds an object property to a function that will be called when that property is looked up
-
-#### Setter Method
-
-- Used to change data
+- Introduced in ES6
+- Can be used for reading and writing properties
+  - <https://www.quora.com/Why-would-someone-use-getter-and-setter-instead-of-methods-in-JavaScript>
