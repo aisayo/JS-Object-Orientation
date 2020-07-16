@@ -14,9 +14,7 @@ class Character {
     renderCharacter() {
         const body = document.body
         body.innerHTML = 
-        `
-        ${this.name} from ${this.show}
-        `
+        ` ${this.name} from ${this.show} `
     }
   }
    
@@ -51,6 +49,21 @@ class Character {
 // 2. resolve the data with first .then()
 // 3. in second .then(), will create new objects with data received
 
+//using call
+
+// function getBrand(prefix) {
+//     console.log(prefix + this.brand);
+// }
+
+// let honda = {
+//     brand: 'Honda'
+// };
+// let audi = {
+//     brand: 'Audi'
+// };
+
+// getBrand.call(honda, "It's a ");
+// getBrand.call(audi, "It's an ");`
 
 // dummy code
 
